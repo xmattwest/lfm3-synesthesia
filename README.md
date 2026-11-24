@@ -11,6 +11,13 @@ Share of 1,000 sampled answers per digit naming each basic color. Square area is
 
 Source: `data/battery_v2`. LFM3-1.7B instruct (revision `40ebe0a`), temperature 1, 1,000 shuffled digit orders, 10,000 answers. Swatches stand in for the color words; they are not colors the model produced.
 
+**No digit has a single color: every band mixes many.**
+The same 10,000 answers, one tile per answer. Each digit's band holds its 1,000 answers in run order, down each column and then left to right.
+
+![Ten horizontal bands, one per digit, each holding 1,000 tiles, one per sampled answer. Black fills much of the 0 and 8 bands and purple much of 7 and 9, but every band mixes many colors. Beige tiles are off-palette or unparsed answers.](figures/mosaic.svg)
+
+Source: `data/battery_v2`, as above. Unlike the grid, the mosaic keeps the 1,416 off-palette and unparsed answers, drawn in beige.
+
 ## Results
 
 - **Each digit has its own palette.** Cramér's V between digit and named color is 0.26. Shuffling the digit labels within each run gives a 95th percentile of 0.039 (p = 0.0001, 10,000 shuffles).
@@ -83,7 +90,7 @@ The reference palette in `data/reference` comes from an earlier LFM3 likelihood 
 | --- | --- |
 | `PROTOCOL.md` | Design, statistics, predictions and outcomes for both batteries |
 | `scripts/battery_v1.py`, `battery_v2.py` | The scripts that produced the data (run and report stages) |
-| `scripts/verify.py`, `figure.py` | Reproduction checks; the figure and table above |
+| `scripts/verify.py`, `figure.py` | Reproduction checks; the two figures and the table above |
 | `src/lfm3lab/` | Prompt, parsing and color helpers, unchanged from the runs |
 | `data/` | Answers, run settings and analyses; see [data/README.md](data/README.md) |
 | `vendor/warm-precision-kit/` | Figure style from the [Warm Precision kit](https://github.com/xmattwest/warm-precision-kit) (MIT) |

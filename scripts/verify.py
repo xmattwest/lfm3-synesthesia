@@ -7,7 +7,7 @@
    (their hashes are recorded in each run_config.json).
 3. Re-running both reports on copies of the saved answers rewrites analysis.json and findings.md
    byte for byte.
-4. The palette figure and the README table match the data.
+4. The palette grid, the answer mosaic and the README table match the data.
 """
 
 from __future__ import annotations
@@ -35,7 +35,7 @@ def check_manifest() -> bool:
     for line in (DATA / "SHA256SUMS").read_text().splitlines():
         h, name = line.split(maxsplit=1)
         listed[name] = h
-    present = {str(p.relative_to(DATA)) for p in DATA.rglob("*") if p.is_file() and p.name not in UNLISTED}
+    present = {str(p.relative_to(DATA)) for p in DATA.rglob("*") if p.is_file() and p.name not in UNLISTED and not p.name.startswith(".")}
     bad = [n for n, h in listed.items() if not (DATA / n).is_file() or sha(DATA / n) != h]
     extra = sorted(present - set(listed))
     for n in bad:
@@ -87,7 +87,7 @@ def main():
     checks = [("data files match SHA256SUMS", check_manifest),
               ("helper modules match the versions used for the runs", check_helpers),
               ("reports reproduce analysis.json and findings.md byte for byte", check_reports),
-              ("palette figure and README table match the data", check_figure)]
+              ("figures and README table match the data", check_figure)]
     failed = 0
     for label, fn in checks:
         ok = fn()
