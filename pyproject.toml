@@ -1,0 +1,22 @@
+[project]
+name = "lfm3-synesthesia"
+version = "1.0.0"
+description = "A digit-color synesthesia battery for language models, with data and analysis from LFM3-1.7B"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+license = "Apache-2.0"
+authors = [{ name = "Matt West" }]
+dependencies = ["numpy==2.5.4"]
+
+[project.optional-dependencies]
+# Only needed to run the battery on a model. Versions match the original GPU runs.
+run = [
+    "torch==2.9.1",
+    "transformers==5.21.0",
+    "huggingface-hub==2.3.0",
+    "safetensors==0.8.0",
+    "tqdm==4.70.1",
+]
+
+[tool.uv]
+package = false

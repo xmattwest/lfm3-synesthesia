@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "If you use this test or its data, please cite it as below."
+title: "LFM3 synesthesia: a digit-color association battery for language models"
+type: software
+authors:
+  - family-names: West
+    given-names: Matt
+version: 1.0.0
+license: Apache-2.0
+repository-code: "https://github.com/xmattwest/lfm3-synesthesia"
+keywords:
+  - synesthesia
+  - language models
+  - LFM3

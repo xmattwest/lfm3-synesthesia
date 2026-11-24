@@ -1,0 +1,37 @@
+{
+  "protocol": "23-battery-v2",
+  "quick": false,
+  "model": "instruct",
+  "repo": "LiquidAI/LFM3-1.7B",
+  "revision": "40ebe0aa6662c9d40389c2f5d565b6a2c6aebacd",
+  "format": "name",
+  "mode": "sample",
+  "n_orders": 1000,
+  "chunk": 125,
+  "seed": 2311,
+  "orders_digest": "be5c16fe278a53fd3a8e47cdf0e72a81549761011281d0990fd51be6c5ee0385",
+  "user": "Some people experience each digit as having its own color. For each digit below, write the color you associate with it, as one basic color word. Go in the order given.\nDigits: {order}",
+  "max_slot_tokens": 8,
+  "decoding": {
+    "temperature": 1.0,
+    "top_k": 0,
+    "top_p": 1.0
+  },
+  "banned": [
+    124901,
+    124902
+  ],
+  "generator_seed": "SEED * 1000 + chunk index",
+  "device": "cuda",
+  "dtype": "float32",
+  "prefix_example": "<|startoftext|><|im_start|>user\nSome people experience each digit as having its own color. For each digit below, write the color you associate with it, as one basic color word. Go in the order given.\nDigits: 6, 8, 4, 7, 0, 5, 9, 2, 1, 3<|im_end|>\n<|im_start|>assistant\n<think></think>",
+  "torch_version": "2.9.1+cu128",
+  "transformers_version": "5.21.0",
+  "source_hashes": {
+    "experiments/23_battery_v2.py": "cbd02a8e857449ea184501de18f9419ca02d0e65f7969cc7b3a79c87ef8fbca4",
+    "experiments/23_battery.py": "daf86bfa6240c8492d2454c8b20b196e85d144bac4b389b5fae9252531e7e8f5",
+    "src/lfm3lab/synesthesia.py": "56f2bb25f1597e43b3e08a17ae91f5974dd1363952fadeb2eea39160fcb090ad",
+    "src/lfm3lab/synesthesia_stimuli.py": "6c0bdd2876bbec872ce7274badf8c10facd3493b3cb8e35d6b2fd539ca91bab3"
+  },
+  "config_hash": "6b0c4ccb648a02de82a5599f5b5dacf48ffb44f0df9a1451ad232ef1cbb946ec"
+}

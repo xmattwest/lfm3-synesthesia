@@ -1,0 +1,7 @@
+{
+  "config_hash": "a87f8ab6cb65ec624a34b772dd9b3fb161a8b83d9472200203f6e0c73f6b46b9",
+  "max_pad_vs_single": 1.9073486328125e-05,
+  "max_repeat_diff": 0.0,
+  "loop_batched_equals_single": true,
+  "passed": true
+}

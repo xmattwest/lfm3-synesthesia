@@ -1,0 +1,10 @@
+{
+  "config_hash": "6b0c4ccb648a02de82a5599f5b5dacf48ffb44f0df9a1451ad232ef1cbb946ec",
+  "max_pad_vs_single": 3.719329833984375e-05,
+  "max_repeat_diff": 0.0,
+  "greedy_batched_equals_single": true,
+  "n_orders_checked": 8,
+  "n_orders_identical": 8,
+  "max_slot_logprob_batched_vs_single": 4.482269287109375e-05,
+  "passed": true
+}

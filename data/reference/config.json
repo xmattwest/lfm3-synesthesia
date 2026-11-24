@@ -1,0 +1,155 @@
+{
+  "protocol": "23-stage1-likelihood-v1",
+  "revisions": {
+    "instruct": "40ebe0aa6662c9d40389c2f5d565b6a2c6aebacd",
+    "base": "545fc8f4c7b5fa9f405105274cd29c4f8f44b526"
+  },
+  "conditions": {
+    "instruct_chat": [
+      "instruct",
+      "chat"
+    ],
+    "instruct_raw": [
+      "instruct",
+      "raw"
+    ],
+    "base_raw": [
+      "base",
+      "raw"
+    ]
+  },
+  "families": {
+    "color_fwd": [
+      "color_fwd",
+      [
+        "black",
+        "white",
+        "red",
+        "green",
+        "yellow",
+        "blue",
+        "brown",
+        "purple",
+        "pink",
+        "orange",
+        "gray"
+      ],
+      [
+        "digit_numeral",
+        "digit_word",
+        "datatype",
+        "control"
+      ]
+    ],
+    "mood_fwd": [
+      "mood_fwd",
+      [
+        "happy",
+        "sad",
+        "calm",
+        "angry",
+        "anxious",
+        "lonely",
+        "playful",
+        "serious"
+      ],
+      [
+        "digit_numeral",
+        "digit_word",
+        "control"
+      ]
+    ],
+    "color_rev": [
+      "digit_rev",
+      [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      [
+        "color_cue"
+      ]
+    ],
+    "mood_rev": [
+      "digit_rev",
+      [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      [
+        "mood_cue"
+      ]
+    ],
+    "color_optout": [
+      "color_optout",
+      [
+        "black",
+        "white",
+        "red",
+        "green",
+        "yellow",
+        "blue",
+        "brown",
+        "purple",
+        "pink",
+        "orange",
+        "gray",
+        "none"
+      ],
+      [
+        "digit_numeral",
+        "digit_word",
+        "datatype",
+        "control"
+      ]
+    ]
+  },
+  "calibrator": {
+    "digit_numeral": "null_digit",
+    "digit_word": "null_digit",
+    "datatype": "null_datatype",
+    "control": "null_control",
+    "color_cue": "null_color",
+    "mood_cue": "null_mood"
+  },
+  "prompts_digest": "06d66e50d2a8c9716f5e1a0c3ab0eb342de7c8c323b2dda5f959b684abcf0426",
+  "n_prompts": 1718,
+  "sequence_digests": {
+    "instruct_chat": "cb46a148366a9e9f063d925d60e38d4593891a79143c259ecb07ce974f398481",
+    "instruct_raw": "920586156b4d7790cb95fa8ab5300fc387a538f0615d0e2a10cb4c5b9f6aee59",
+    "base_raw": "f0acfc7b84b398c33e05120a4fd8f2f4d7aaba452b0b94cb3fc329569e36f4da"
+  },
+  "n_sequences": {
+    "instruct_chat": 11268,
+    "instruct_raw": 9348,
+    "base_raw": 9348
+  },
+  "device": "mps",
+  "dtype": "float32",
+  "batch": 48,
+  "preflight_tolerance": 0.001,
+  "session_guard_s": 1800,
+  "torch_version": "2.14.1",
+  "transformers_version": "5.21.0",
+  "source_hashes": {
+    "experiments/23_synesthesia.py": "d0260924628d352c18ef4bef29437a3e200873d113a20348007408f219786cfd",
+    "src/lfm3lab/synesthesia.py": "56f2bb25f1597e43b3e08a17ae91f5974dd1363952fadeb2eea39160fcb090ad",
+    "src/lfm3lab/model.py": "eb1536b33dff3aca471d7f7d076b8c04f0f117dd6705bf51dda99fb1f4d4c147"
+  },
+  "config_hash": "093e61558bfd0f4e475e08582338aec54d201f5ecd63de104ebfc36611249f84"
+}
